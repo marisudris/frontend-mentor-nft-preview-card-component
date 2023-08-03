@@ -103,7 +103,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 3.875em 1.5em;
+  padding: clamp(0rem, 6.643rem + -7.381vw, 3.875rem) 1.5em;
 }
 
 .card {
