@@ -64,10 +64,6 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
-a {
-  color: white;
-}
-
 .card {
   color: var(--clr-blue);
 }
@@ -84,6 +80,15 @@ a {
 .card-stats-value {
   color: var(--clr-accent);
   font-weight: var(--font-weight-semibold);
+}
+
+.card-link {
+  color: white;
+}
+
+.card-link:hover,
+.card-link:focus {
+  color: var(--clr-accent);
 }
 
 /***********
@@ -113,9 +118,35 @@ body {
   box-shadow: 0em 1.75em 0.5em 1em rgba(0, 0, 0, 0.07);
 }
 
-.card-image {
+.card-image-container {
+  position: relative;
+  display: block;
   margin-bottom: 1.6em;
+}
+
+.card-image {
   border-radius: 10px;
+  display: block;
+  width: 100%;
+}
+
+.card-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-image-container:hover .card-image-overlay {
+  opacity: 1;
 }
 
 .card-stats,
