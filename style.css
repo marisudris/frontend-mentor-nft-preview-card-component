@@ -111,7 +111,7 @@ body {
 }
 
 .card {
-  max-width: 350px;
+  max-width: 21.875em;
   padding: 1.5em;
   padding-bottom: clamp(1.5em, 1.324em + 0.751vw, 2em);
   background-color: var(--clr-blue-card-bg);
